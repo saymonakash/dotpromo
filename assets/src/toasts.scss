@@ -1,0 +1,72 @@
+.gui-toast-group {
+
+    @apply fixed top-5 right-5 z-50;
+  
+  }
+  
+  .gui-toast {
+
+    --_duration: 3s;
+    --_bg-lightness: 90%;
+    --_travel-distance: 0;
+
+  
+    padding-inline-end: 5px;
+
+    will-change: transform;
+    animation: 
+      fade-in .3s ease,
+      slide-in .3s ease,
+      fade-out .3s ease var(--_duration);
+  
+    @media (--dark) {
+      color: white;
+      --_bg-lightness: 20%;
+    }
+  
+    @media (--motionOK) {
+      --_travel-distance: 1vh;
+    }
+  }
+
+
+  .gui-toast .toast {
+
+
+    --_duration: 3s;
+    --_bg-lightness: 90%;
+    --_travel-distance: 0;
+  
+    padding-inline-end: 5px;
+
+    will-change: transform;
+    animation: 
+      fade-in .3s ease,
+      slide-in .3s ease,
+      slide-out .3s ease var(--_duration);
+  
+    @media (--dark) {
+      color: white;
+      --_bg-lightness: 20%;
+    }
+  
+    @media (--motionOK) {
+      --_travel-distance: 1vh;
+    }
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0 }
+  }
+  
+  @keyframes fade-out {
+    to { opacity: 0 }
+  }
+  
+  @keyframes slide-in {
+    from { transform: translateY(var(--_travel-distance, 20px)) }
+  }
+
+  @keyframes slide-out {
+    from { transform: translateY(var(20px, --_travel-distance)) }
+  }

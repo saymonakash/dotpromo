@@ -1,0 +1,42 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+    .hover-float {
+
+    }
+    .text-primary {
+      @apply text-[#117AE5];
+    }
+
+    .bg-primary {
+      @apply bg-[#117AE5];
+    }
+
+    .bg-primary-hover {
+      @apply bg-[rgb(18,110,201)];
+    }
+
+    .border-primary {
+      @apply border-[#117AE5];
+    }
+
+    .fill-primary {
+
+      @apply fill-[#117AE5];    
+  }
+    
+  .text-secondary {
+  
+      @apply text-[#FFC107];
+  }
+
+}
+  
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+}
+

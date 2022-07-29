@@ -1,0 +1,116 @@
+.simo {
+    /* @apply border; */
+  }
+  
+  .simo .progress-item {
+    @apply flex-1 relative border-l-8 md:border-l-0 pb-6 md:pb-0 pl-4 md:pl-0;
+    /* outline: 1px solid sienna; */
+  }
+  
+  .simo .progress-item:last-child {
+    @apply flex-none;
+  }
+  
+  .simo .progress-item::after {
+    @apply
+      block
+      md:hidden
+      z-10
+      absolute
+      top-0
+      -left-3
+      w-4
+      h-4
+      bg-gray-200
+      rounded-full;
+    content: '';
+  }
+  
+  .simo .progress-item .progress-image {
+    @apply flex justify-center items-center rounded-full w-12 h-12 md:w-20 md:h-20 bg-gray-200 mb-2 md:mb-5;
+  }
+  
+  .simo .progress-item .progress-border {
+    @apply
+      relative
+      w-full
+      py-2
+      px-2
+      md:border-t-8
+      border-gray-200
+      text-left
+      transform
+      md:translate-x-10;
+  
+    /* outline: 1px solid royalblue; */
+  }
+  
+  .simo .progress-item .progress-border .progress-border-bullet {
+    @apply
+      hidden
+      md:block
+      absolute
+      -top-3
+      -left-1
+      w-4
+      h-4
+      rounded-full
+      bg-gray-200;
+  }
+  
+  .simo .progress-item .progress-border .progress-border-label {
+    @apply
+      block
+      text-gray-400
+      transform
+      md:-translate-x-1/2
+      md:text-center
+      ;
+  
+    /* outline: 1px solid green; */
+  }
+  
+  
+  /* Active State */
+  .simo .progress-item.active .progress-border {
+    @apply border-blue-500;
+  }
+  
+  .simo .progress-item.active .progress-border .progress-border-bullet {
+    @apply bg-blue-500;
+  }
+  
+  .simo .progress-item.active .progress-border .progress-border-label {
+    @apply text-black dark:text-white;
+  }
+  
+  /* Active state for mobile */
+  .simo .progress-item.active {
+    @apply border-blue-500;
+  }
+  
+  .simo .progress-item.active::after {
+    @apply bg-blue-500;
+  }
+  
+  
+  /**
+  * Custom style for First & Last element
+  **/
+  
+  .simo .progress-item.active .progress-image {
+    @apply mx-0 bg-neutral-400 dark:bg-neutral-700 dark:text-white;
+  }
+  
+  
+  .simo .progress-item:first-child .progress-border {
+    @apply text-left;
+  }
+  
+  .simo .progress-item:last-child .progress-border {
+    @apply text-left border-transparent;
+  }
+  
+  .simo .progress-item:last-child {
+    @apply border-transparent;
+  }

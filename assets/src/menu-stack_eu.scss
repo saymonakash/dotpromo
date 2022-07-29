@@ -1,0 +1,44 @@
+.stack-menu_list {
+    display: none;
+
+
+    &.root {
+        display: block;
+    }
+  
+
+    li {
+        
+        &.hidden {
+            display: none;
+        }
+
+        a {
+            
+            &.hidden {
+                display: none !important;
+            }
+        }
+    }
+
+     
+    .stack-menu_list {
+        display: none;
+
+        .back {
+            display: block;  
+        }
+        
+        .back.hidden {
+    
+             display: none;
+        }
+
+        &.active {
+            display: block;
+        }
+
+    
+    
+    }
+}

@@ -1,0 +1,25 @@
+
+.floating_input {
+
+    @apply dark:bg-neutral-700 dark:border-neutral-600 rounded;
+}
+
+.floating_input {
+
+    &.is-invalid {
+
+    @apply dark:bg-neutral-700 dark:border-red-800;
+    }
+
+    &.is-valid {
+
+        @apply dark:bg-neutral-700 dark:border-green-800;
+     }
+        
+}
+
+.floating_input:disabled  {
+
+    @apply dark:bg-neutral-600 dark:border-neutral-600 rounded;
+
+}

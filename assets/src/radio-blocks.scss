@@ -1,0 +1,34 @@
+.radio-toolbar  {
+  @apply py-2 ;
+ 
+  input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+
+   label {
+
+    @apply w-full bg-white text-lg dark:bg-neutral-800 border-gray-300 dark:border-neutral-600 border-2 py-4 px-6 rounded-md dark:shadow-md;
+
+   
+  }
+
+  label:hover {
+
+    @apply bg-gray-200 dark:bg-neutral-700 cursor-pointer;
+
+  }
+
+  input[type="radio"]:focus + label {
+
+    @apply border-gray-700 dark:bg-neutral-700;
+  }
+
+  input[type="radio"]:checked + label {
+
+    @apply bg-neutral-200  dark:bg-neutral-700 border-2 border-blue-700 dark:border-blue-500;
+  }
+
+}
+

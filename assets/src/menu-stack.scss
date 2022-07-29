@@ -1,0 +1,49 @@
+.stack-menu_list {
+    display: none;
+
+  
+    &.root {
+        @apply block border border-red-500;
+        // display: flex;
+    }
+
+    li {
+        &.hidden {
+            display: none;
+        }
+
+        a {
+            @apply flex items-center md:space-x-2 py-2 px-2 hover:bg-gray-100 ;
+
+            &.hidden {
+                display: none !important;
+            }
+        }
+    }
+    
+    .stack-menu_list {
+       
+        display: none; 
+        @apply  w-96 h-screen z-50 mb-6 shadow;
+        
+        overflow-y: scroll;
+
+        &.active {
+            @apply flex-col md:absolute md:z-50 md:border md:bg-white;
+            display: flex;
+        }
+
+       li{ 
+
+        a {
+            @apply flex items-center md:space-x-2 py-2 px-3 hover:bg-gray-100 ;
+
+            &.hidden {
+                display: none !important;
+            }
+        }
+
+        
+      }
+    }
+}
