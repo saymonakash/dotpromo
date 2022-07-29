@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html class="dark overflow-hidden" lang="lv">
+<html
+	class="dark overflow-hidden"
+	lang="lv">
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -12,7 +14,7 @@
 
 	<title>Ecom.eu</title>
 
-
+	
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="http://ecom.test">
 	<meta property="fb:app_id" content="">
@@ -36,10 +38,7 @@
 	<script type="text/javascript" as="script" src="../assets/dist/js/index.js" defer="defer"></script>
 	<link rel="stylesheet" type="text/css" as="style" href="../assets/dist/js/bundle.min.css">
 	<script type="text/javascript" as="script" src="../assets/dist/js/jquery.bundle.min.js"></script>
-
-	<style>
-
-	</style>
+	<script src="https://cdn.tailwindcss.com"></script>
 
 	<script>
 		if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -47,6 +46,7 @@
 		} else {
 			document.documentElement.classList.remove('dark')
 		}
+
 	</script>
 
 	<script type="application/ld+json">
@@ -79,9 +79,15 @@
              
            }      
     </script>
+	<style>
+		body {
+			touch-action: none;
+			-ms-touch-action: none;
+		}
+	</style>
+</head>
 
-
-<body class="relative text-gray-800 pace-done font-primary dark:text-neutral-100" x-data="
+<body class="relative text-gray-800 pace-done font-primary dark:text-neutral-100 overflow-hidden" x-data="
 { 
   mobileMenuOpen: false,
   default_results : true, 
@@ -1998,7 +2004,7 @@
 					<div class="md:relative">
 
 						<form id="search" name="search" method="get" action="/search/"
-							:class="search ? 'absolute top-0 left-0 z-40  w-full  lg:px-0  md:static md:top-0 md:px-0 lg:py-0 bg-white dark:shadow-md  lg:shadow-none' : 'flex' "
+							:class="search ? 'fixed top-0 left-0 z-40 w-full  lg:px-0  md:static md:top-0 md:px-0 lg:py-0 bg-white dark:shadow-md  lg:shadow-none' : 'flex' "
 							x-data="{ input : '' }" class="flex">
 
 							<div class="flex w-full space-x-2 md:flex-row-reverse md:relative dark:bg-neutral-700"
@@ -2044,8 +2050,7 @@
 
 						<!-- Search Dropdown -->
 						<div x-show="search" id="search"
-							class="absolute w-full h-screen top-0 left-0 md:h-[250px] md:top-[44px] lg:inset-x-0 py-4 px-4 bg-white dark:bg-neutral-800  dark:text-white shadow-lg z-30 text-sm flex flex-col items-stretch overflow-y-auto  mb-5  lg:mb-4 dark:shadow-lg "
-							style="display: none;">
+							class="fixed md:absolute w-full h-full top-0 left-0 md:h-[250px] md:top-[44px] lg:inset-x-0 py-4 px-4 bg-white dark:bg-neutral-800  dark:text-white shadow-lg z-30 text-sm flex flex-col items-stretch overflow-y-auto  mb-5  lg:mb-4 dark:shadow-lg ">
 							<!-- Recent Search -->
 
 							<div class="w-full h-full search-group pt-14 md:pt-0">
