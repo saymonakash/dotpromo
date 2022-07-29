@@ -1,4 +1,13 @@
 @charset "UTF-8";
+
+
+html,body{
+  touch-action: none;
+    -ms-touch-action: none;
+}
+
+
+
 /**
  * Swiper 8.3.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
